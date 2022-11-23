@@ -45,7 +45,6 @@ public class Assignment_1 {
     stopWordsSet.add("it");
     stopWordsSet.add("they");
     stopWordsSet.add("that");
-    stopWordsSet.add("them");
     stopWordsSet.add("a");
     stopWordsSet.add("b");
     stopWordsSet.add("c");
