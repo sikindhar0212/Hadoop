@@ -4,17 +4,26 @@ Word Count Map Reduce Code Java
 Hadoop Commands:
 
 hadoop fs -mkdir InputFolder                                      //to create a new input folder
+
 hadoop fs -copyFromLocal <input file> InputFolder                  //to copy a file from local directory to hadoop environment
+
 hadoop fs -ls InputFolder                                          //to see the files inside "InputFolder"
+
 hadoop jar <jar file name> <class name> InputFolder OutputFolder   //running mapreduce operation
+
 hadoop fs -ls OutputFolder                                        //to see the files inside "OutputFolder"
+
 hadoop fs -cat OutputFolder/part-r-00000                          //to see the content inside "OutputFolder/part-r-00000" file
+
 hadoop fs -rm -r OutputFolder                                     //to remove "OutputFolder" directory and all its files
+
 remove OutputFolder before generating the next results.
+
 remove/clean InputFolder if you want to use a different file as input.
+
 Common Errors:
 
-Error 1: mkdir: Call From cs6304-akkcm-02/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused
+Error 1: mkdir: Call From -- to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused
 Explanation and Fix: In general this error comes if you are running hadoop first time on your VM after a reset. The below commands will fix it.
 
 stop-all.sh
